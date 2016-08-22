@@ -1,0 +1,140 @@
+body
+{
+    font-family: 'Josefin Sans';
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 1170px;
+}
+
+div {
+    display: block;
+}
+
+/*menu in header*/
+.navbar-inverse .navbar-nav > li > a {
+color: #fff;
+padding: 15px 50px;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+color: rgb(172, 172, 172);
+}
+
+.navbar-inverse {
+background-color: rgba(255, 255, 255, 0.0);
+border-color: rgba(255, 255, 255, 0.0);
+border: 0px;
+background: transparent linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%) repeat scroll 0% 0%;
+}
+
+/*Logo in header */
+.navbar-brand {
+height: 60px;
+}
+
+/* Background images */
+img.background_image {
+width: 100%;
+position: relative;
+}
+
+/*text on images*/
+.on_photo {
+position: absolute;
+top: 150px;
+color: #fff;
+font-size: 20px;
+}
+
+/*===HEADER===*/
+header {
+background: url("../img/iceland.jpg") no-repeat center center;
+background-size: cover;
+position: relative;
+height: 100%;
+}
+
+.header-intro {
+padding-top: 450px;
+padding-bottom:70px;
+color: #fff;
+font-size: 18px
+}
+
+/*===ABOUT=== */
+
+#about-section .container {
+padding-top: 50px;
+padding-bottom: 40px
+}
+
+.glyphicon-large {
+font-size: 40px;
+}
+
+.row {
+padding-bottom: 30px;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+#about-section h4 {
+font-weight: bold;
+}
+
+/*===STATISTICS===*/
+
+#statistics-section {
+    background: url("../img/laptop1.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 50px;
+    color: rgb(224, 224, 224);
+}
+
+.number {
+font-size: 60px;
+}
+
+#statistics-section h3 {
+margin-top: 0;
+}
+
+/*===PRICES===*/
+
+#prices-section {
+padding-top: 100px;
+padding-bottom: 100px;
+}
+
+.centered {
+margin-left: auto;
+margin-right: auto;
+*zoom: 1;
+text-align: center;
+}
+
+#prices-section .col-md-3 {
+padding-left: 150px;
+}
+
+.name {
+font-size: 14px;
+font-family: 'Josefin Sans';
+padding-top: 11px;
+font-weight: bold;
+}
+
+.border-dotted {
+border: 2px dashed #aaa;
+display: inline;
+padding: 9px;
+}

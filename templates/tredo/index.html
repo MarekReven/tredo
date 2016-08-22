@@ -1,11 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <title>Tredo</title>
-    <link href="{{STATIC_URL}}/stylesheets/styles.css" rel="stylesheet" type="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400">
+    <link href="{{STATIC_URL}}/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{STATIC_URL}}/css/main.css">
+    <link href="{{STATIC_URL}}/css/styles.css" rel="stylesheet" type="text/css">
+
 </head>
+
+
 <body>
-<h1>this is index</h1>
+
+<!--- Website code from here --->
+
+<!--Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img class="navbar-brand" src="{{STATIC_URL}}/img/logo.png" alt="tredo_trans">
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#top">HOME</a></li>
+                    <li><a href="#about-section">O MNIE</a></li>
+                    <li><a href="#prices-section">CENY</a></li>
+                    <li><a href="#k">KONTAKT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!--Header-->
+
+<header id="top">
+
+    <!--<img class="background_image" src="{{STATIC_URL}}/img/iceland.jpg" alt="iceland_picture">-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+
+                <div class="header-intro">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magullamco labori
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<!--About Section-->
+<div id="about-section">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-4">
+
+                <h4>O MNIE</h4>
+
+            </div>
+        </div>
+
+        <div class="row vertical-align">
+            <div class="col-md-1 glyphicon glyphicon-plane glyphicon-large"></div>
+            <div class="col-md-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magullamco labori Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magullamco labori</div>
+
+        </div>
+
+        <div class="row vertical-align">
+            <div class="col-md-1 glyphicon glyphicon-road glyphicon-large">
+            </div>
+            <div class="col-md-6">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magullamco labori Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magullamco labori
+            </div>
+        </div>
+
+        <div class="row vertical-align">
+            <div class="col-md-1 glyphicon glyphicon-list-alt glyphicon-large">
+            </div>
+            <div class="col-md-6">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magullamco labori Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magullamco labori
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<!--Statistics Section -->
+
+<div id="statistics-section">
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-3">
+                <span class="number">423</span>
+                <h3>wykonane tlumaczenia</h3>
+            </div>
+
+            <div class="col-md-3">
+                <span class="number">38</span>
+                <h3>zadowolonych klientow</h3>
+            </div>
+
+            <div class="col-md-3">
+                <span class="number">15</span>
+                <h3>lat doswiadczenia</h3>
+            </div>
+
+            <div class="col-md-3">
+                <span class="number">2 h</span>
+                <h3>sredni czas odpowiedzi</h3>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!--Prices-->
+
+<div id="prices-section">
+
+    <div class="container">
+
+        <div class="centered">
+
+            <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-2 glyphicon glyphicon-folder-open glyphicon-large">
+                <div class="name">ZWYKŁE</div>
+            </div>
+            <div class="col-md-2 glyphicon glyphicon-wrench glyphicon-large">
+                <div class="name">TECHNICZNE</div>
+            </div>
+            <div class="col-md-2 glyphicon glyphicon-hourglass glyphicon-large">
+                <div class="name">EKSPRESOWE</div>
+            </div>
+            </div>
+
+            <div class="row">
+                <div id="padded" class="col-md-3 name">PL > SV</div>
+                <div class="col-md-2">45 - 60</div>
+                <div class="col-md-2">50 - 70</div>
+                <div class="col-md-2">55 - 80</div>
+                <div class="col-md-2 last">PLN</div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 name">SV > PL</div>
+                <div class="col-md-2">45 - 60</div>
+                <div class="col-md-2">55 - 75</div>
+                <div class="col-md-2">60 - 85</div>
+                <div class="col-md-2 last">PLN</div>
+            </div>
+
+            <div class="border-dotted name">
+                SKONTAKTUJ SIĘ W CELU DOKONANIA DOKŁADNEJ WYCENY
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</div>
+
+<!--- To here --->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="{{STATIC_URL}}/js/application.js"></script>
+<script src="{{STATIC_URL}}/js/bootstrap.min.js"></script>
+
 </body>
 </html>
