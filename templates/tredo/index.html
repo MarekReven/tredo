@@ -47,16 +47,29 @@
 
     <!--<img class="background_image" src="{{STATIC_URL}}/img/iceland.jpg" alt="iceland_picture">-->
     <div class="container">
-        <div class="row">
-            <div class="col-md-6">
+        <div class="header-intro">
 
-                <div class="header-intro">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magullamco labori
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 header-intro-title">
+                    <div>VERSION OF LOREM IPSUM</div>
                 </div>
-
+                <div class="col-md-4 col-md-offset-2 header-intro-title extra-bottom">
+                    <hr>
+                </div>
             </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 extra-top">
+                    <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magullamco labori dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magullamco labori
+                    </div>
+                </div>
+            </div>
+
         </div>
+
+
     </div>
 
 </header>
@@ -66,24 +79,23 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-2 align-center">
 
                 <h4>O MNIE</h4>
 
             </div>
         </div>
 
-        <div class="row vertical-align">
-            <div class="col-md-1 glyphicon glyphicon-plane glyphicon-large"></div>
+        <div class="row vertical-align extra-bottom">
+            <div class="col-md-2 align-center"><img src="{{STATIC_URL}}/img/flaga.png" alt="flag_glyph"></div>
             <div class="col-md-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                 et dolore magullamco labori Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                 et dolore magullamco labori</div>
 
         </div>
 
-        <div class="row vertical-align">
-            <div class="col-md-1 glyphicon glyphicon-road glyphicon-large">
-            </div>
+        <div class="row vertical-align extra-bottom">
+            <div class="col-md-2 align-center glyphicon glyphicon-wrench glyphicon-large"></div>
             <div class="col-md-6">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                 et dolore magullamco labori Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -91,9 +103,8 @@
             </div>
         </div>
 
-        <div class="row vertical-align">
-            <div class="col-md-1 glyphicon glyphicon-list-alt glyphicon-large">
-            </div>
+        <div class="row vertical-align extra-bottom">
+            <div class="col-md-2 glyphicon glyphicon-list-alt glyphicon-large align-center"></div>
             <div class="col-md-6">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                 et dolore magullamco labori Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -108,7 +119,7 @@
 <!--Statistics Section -->
 
 <div id="statistics-section">
-
+    <div class="arrow-down"></div>
     <div class="container">
         <div class="row">
 
@@ -145,9 +156,9 @@
 
         <div class="centered">
 
-            <div class="row">
+            <div class="row extra-bottom">
             <div class="col-md-3"></div>
-            <div class="col-md-2 glyphicon glyphicon-folder-open glyphicon-large">
+            <div class="col-md-2 glyphicon glyphicon-duplicate glyphicon-large">
                 <div class="name">ZWYKŁE</div>
             </div>
             <div class="col-md-2 glyphicon glyphicon-wrench glyphicon-large">
@@ -158,7 +169,7 @@
             </div>
             </div>
 
-            <div class="row">
+            <div class="row extra-bottom">
                 <div id="padded" class="col-md-3 name">PL > SV</div>
                 <div class="col-md-2">45 - 60</div>
                 <div class="col-md-2">50 - 70</div>
@@ -166,7 +177,7 @@
                 <div class="col-md-2 last">PLN</div>
             </div>
 
-            <div class="row">
+            <div class="row extra-bottom">
                 <div class="col-md-3 name">SV > PL</div>
                 <div class="col-md-2">45 - 60</div>
                 <div class="col-md-2">55 - 75</div>
@@ -186,6 +197,66 @@
 
 </div>
 
+<!--Contact-->
+<div id="contact-section">
+
+    <div class="container">
+
+        <div class="row centered title extra-bottom">
+            <div class="col-md-8 col-md-offset-2">
+                KONTAKT
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 col-md-offset-2">
+
+                <form name="contact_us" id="contact_form" class="form-horizontal">
+                    <div class="row nobottom">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control sharp-corners narrower" id="name_surname" placeholder="Imię i nazwisko...">
+                            </div>
+                        </div>
+                        <div class="col-md-6 no-left-padding">
+                            <div class="form-group">
+                                <input type="email" class="form-control sharp-corners narrower" id="email" placeholder="E-mail...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row extra-bottom">
+                        <div class="col-md-12">
+                            <textarea type="text" class="form-control sharp-corners extra-high" id="message" placeholder="Napisz wiadomość..."></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 centered">
+                            <div class="border-dotted send-button">
+                                WYŚLIJ
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-2 glyphicon glyphicon-globe glyphicon-large globe"></div>
+            <div class="col-md-2">
+
+                <div class="row">
+                    <div class="col-md-12 name">Zuzanna Ćwiąkała</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">zuzanna.cwiakala@gmail.com<br>+48 121 121 121</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">Księżycowa 5b/5<br>81-821 Sopot</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
 <!--- To here --->
 
 
@@ -195,3 +266,61 @@
 
 </body>
 </html>
+
+
+
+<!--
+        <div class="row">
+            <div class="col-md-4 col-md-offset-2">
+
+                <div class="form-horizontal">
+
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <input type="text" class="class-lg-2" id="name_surname" placeholder="Imię i nazwisko...">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="class-lg-2" id="email" placeholder="E-mail...">
+                        </div>
+                    </form>
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <textarea type="text" class="form-control" id="message" placeholder="Napisz wiadomość..."></textarea>
+                        </div>
+                    </form>
+                 </div>
+             </div>
+        </div>
+
+
+        <!--<form class="form-horizontal">-->
+            <!--<form class="form-inline">-->
+<!--
+                <div class="row">
+                    <div class="col-md-2 col-md-offset-2">
+
+                        <input type="text" class="class-lg-2" id="name_surname" placeholder="Imię i nazwisko...">
+
+                    </div>
+
+                    <div class="col-md-2">
+
+                        <input type="email" class="class-lg-2" id="email" placeholder="E-mail...">
+
+                    </div>
+                </div>
+            </form>
+
+            <div class="row">
+
+                <div class="col-md-4 col-md-offset-2">
+
+                    <textarea type="text" class="form-control" id="message" placeholder="Napisz wiadomość..."></textarea>
+
+                </div>
+
+            </div>
+
+        </form>-->
+
+
