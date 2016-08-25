@@ -18,7 +18,7 @@ div {
 /*menu in header*/
 .navbar-inverse .navbar-nav > li > a {
 color: #fff;
-padding: 15px 50px;
+padding: 15px 50px 10px 50px;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover {
@@ -34,8 +34,12 @@ background: transparent linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 25
 
 /*Logo in header */
 .navbar-brand {
-height: 60px;
+height: 45px;
+padding: 10px 15px;
 }
+
+.navbar {
+min-height: 44px; }
 
 /* Background images */
 img.background_image {
@@ -51,7 +55,20 @@ color: #fff;
 font-size: 20px;
 }
 
+.extra-bottom {
+    padding-bottom: 30px;
+}
+
+.extra-top {
+    padding-top: 30px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
 /*===HEADER===*/
+
 header {
 background: url("../img/iceland.jpg") no-repeat center center;
 background-size: cover;
@@ -60,7 +77,7 @@ height: 100%;
 }
 
 .header-intro {
-padding-top: 200px;
+padding-top: 300px;
 padding-bottom:90px;
 color: #fff;
 font-size: 15px
@@ -70,11 +87,60 @@ font-size: 15px
 font-size: 28px;
 }
 
-.col-md-offset-2.extra-top {
-padding-top: 30px;
+
+.extra-top.align-left {
+text-align: left;
+}
+
+.extra-top.align-center {
+text-align: center;
+}
+
+@keyframes slide {
+    from {
+    opacity: 0;
+    transform: translate3d(0, -40px, 0);
+    }
+    to {
+    opacity:1;
+    transform: none;
+    }
+}
+
+.slide {
+  -webkit-animation-name: slide;
+  animation-name: slide;
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+   -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.show-menu {
+background-color: rgba(102,102,102,1);
+border-color: rgba(102,102,102,1);
+transition: all 2s ease;
+margin-bottom:0;
+padding-top: 0px;
+}
+
+.hide-menu {
+background-color: rgba(0,0,0,0);
+border-color: rgba(0,0,0,0);
+transition:all 2s ease;
 }
 /*===ABOUT=== */
 
+#about-section {
+    background: transparent url("../img/trojkaty.png") no-repeat center right;
+    background-size: 400px 800px;
+    position: relative;
+    height: 100%;
+    z-index: 2;
+    box-shadow : 0px 0px 45px 15px rgba(0,0,0,0.68);
+}
 
 #about-section .container {
 padding-top: 50px;
@@ -85,8 +151,8 @@ padding-bottom: 40px;
 font-size: 40px;
 }
 
-.row.extra-bottom {
-padding-bottom: 30px;
+#about-section .extra-bottom {
+opacity: 0;
 }
 
 .vertical-align {
@@ -102,18 +168,33 @@ font-weight: bold;
 text-align: center;
 }
 
-/*===STATISTICS===*/
-
-.arrow-down {
-  width: 0;
-  height: 0;
-  border-left: 70px solid transparent;
-  border-right: 70px solid transparent;
-  border-top: 70px solid rgba(0,0,0,0.1);
-  position: absolute;
-  top:800px;
-
+@keyframes slide-content {
+    from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+    }
+    to {
+    opacity:1;
+    transform: none;
+    }
 }
+
+.slide-content {
+  -webkit-animation-name: slide-content;
+  animation-name: slide-content;
+  -webkit-animation-duration: 1.6s;
+  animation-duration: 1.6s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+   -webkit-animation-delay: 0.0s;
+  animation-delay: 0.0s;
+}
+
+.row.slide-content{
+    display:block !important;
+}
+
+/*===STATISTICS===*/
 
 #statistics-section {
     background: url("../img/laptop1.jpg") no-repeat center center;
@@ -124,18 +205,46 @@ text-align: center;
 }
 
 .number {
-font-size: 60px;
+font-size: 50px;
+opacity: 0;
 }
 
 #statistics-section h3 {
 margin-top: 0;
 }
 
+@keyframes slide-numbers {
+    from {
+    opacity: 0;
+    transform: translate3d(0, -0px, 0);
+    }
+    to {
+    opacity:1;
+    transform: none;
+    }
+}
+
+.slide-numbers {
+  -webkit-animation-name: slide-numbers;
+  animation-name: slide-numbers;
+  -webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+   -webkit-animation-delay: 0.0s;
+  animation-delay: 0.0s;
+}
+
 /*===PRICES===*/
 
 #prices-section {
-padding-top: 100px;
+padding-top: 60px;
 padding-bottom: 100px;
+background: transparent url("../img/trojkaty.png") no-repeat center left;
+background-size: 400px 800px;
+position: relative;
+height: 100%;
+z-index: 2;
 }
 
 .centered {
@@ -152,7 +261,6 @@ padding-left: 150px;
 .name {
 font-size: 14px;
 font-family: 'Josefin Sans';
-padding-top: 25px;
 font-weight: bold;
 }
 
@@ -161,6 +269,10 @@ border: 2px dashed #aaa;
 display: inline;
 padding: 9px;
 }
+
+#prices-section .glyphicon {
+    line-height: 1.7;
+    }
 
 /*===CONTACT===*/
 
@@ -191,7 +303,6 @@ border-radius: 0;
 
 textarea.form-control.extra-high {
 height: 100px;
-
 }
 
 .narrower {
@@ -200,7 +311,11 @@ height: 25px;
 
 .send-button {
 padding: 5px 65px;
+transition: box-shadow 0.5s ease;
 }
+
+.send-button:hover {
+box-shadow: 0px 0px 5px 2px rgba(255,255,255,0.7);}
 
 .globe {
 text-align: right;
@@ -213,4 +328,8 @@ line-height: 100px;
     font-weight: 700;
     padding-bottom:10px;
     padding-top: 0;
+}
+
+#fadeIn {
+opacity: 0;
 }
