@@ -5,28 +5,27 @@ $(document).ready(function() {
     var flag=true;
     var flag2=true;
 
-    $("#header-first").addClass('slide');
+    $(".header-intro").addClass('slide');
 
     $('.automatic-slider').unslider({
     autoplay: true,
     delay: 4000
     });
-//
-//    $("#about-section").mouseover(function() {
-//     $(this).css({"box-shadow" : "0px 0px 15px 15px #555", "z-index:" : "5"});
-//      }).mouseleave(function(){
-//        $(this).css({"box-shadow" : "0px 0px 0px #555", "z-index:" : "0"});
-//     });
-//     $("#statistics-section").mouseover(function() {
-//     $(this).css({"box-shadow" : "0px 0px 15px 15px #555", "z-index:" : "5"});
-//      }).mouseleave(function(){
-//        $(this).css({"box-shadow" : "0px 0px 0px #555", "z-index:" : "0"});
-//     });
+
+    $(document).on('click', 'a', function(event){
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 700);
+    });
+
 
     $(window).scroll(function(){
       var windowWidth = $(this).width();
       var windowHeight = $(this).height();
       var windowScrollTop = $(this).scrollTop();
+
     //===HEADER===
 
     if (windowScrollTop > 150)
@@ -42,8 +41,6 @@ $(document).ready(function() {
     $('.navbar-inverse').addClass('hide-menu');
     }
     }
-
-
 
     //===O MNIE===
 
