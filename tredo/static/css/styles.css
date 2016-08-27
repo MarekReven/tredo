@@ -321,6 +321,8 @@ height: 25px;
 .send-button {
 padding: 5px 65px;
 transition: box-shadow 0.5s ease;
+color: white;
+background: rgba(0,0,0,0.0);
 }
 
 .send-button:hover {

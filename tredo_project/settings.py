@@ -64,6 +64,8 @@ DATABASES = {
     }
 }
 
+DATABASE_PATH = os.path.join(BASE_DIR, 'tredo.db')
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
@@ -96,3 +98,10 @@ STATICFILES_FINDERS = (
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
 )
+
+#Sending email
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'host_email'
+EMAIL_HOST_PASSWORD = 'pass'
+EMAIL_PORT = 587
