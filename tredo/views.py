@@ -6,31 +6,27 @@ from django.core.mail import EmailMessage
 
 def index(request):
 
-    print('start')
     if request.method == 'POST':
-        print('1')
         email_form = EmailForm(data=request.POST)
-        print(request.POST)
-        print('2')
-        print(email_form.data)
+
         if email_form.is_valid():
-            print('3')
             email = email_form.save()
-            print('4')
             email_to_send = EmailMessage('{0}'.format("Masz nowy email z Tredo.net"),
                                          'Imie i nazwisko: {0}\n\nEmail: {1}\n\nWiadomosc: {2}'.format(smart_str(email.name), smart_str(email.email), smart_str(email.message)),
-                                         to=['some_email'])
-            print('5')
+                                         to=['receiver_email'])
             email_to_send.send()
-            print('Udalo sie')
+            message_sent = 'Twoja wiadomość została wysłana, dziękuję za kontakt.'
+            context_dict = {'email_form': email_form, 'message_sent': message_sent}
+
         else:
             print email_form.errors, email_form.errors
+            message_not_sent = 'Niestety wysłanie wiadomości nie powiodło się, proszę o kontakt telefoniczny.'
+            context_dict = {'email_form': email_form, 'message_not_sent': message_not_sent}
 
     else:
         print('else')
         email_form = EmailForm()
+        context_dict = {'email_form': email_form}
 
-    return render(request,
-                  'tredo/index.html',
-                  {'email_form': email_form})
+    return render(request, 'tredo/index.html', context_dict)
 

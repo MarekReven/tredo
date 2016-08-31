@@ -403,6 +403,11 @@
                         </div>
                     </div>
                     <div class="row pulseit">
+                        {% if message_sent %}
+                            <div class="message-sent">{{message_sent}}</div>
+                        {% elif message_not_sent %}
+                            <div class="message-not-sent">{{message_not_sent}}</div>
+                        {% endif %}
                         <div class="col-md-12 centered">
                             <button type="submit" class="border send-button">
                                 WYŚLIJ

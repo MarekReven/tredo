@@ -3,7 +3,10 @@
 
 body
 {
+    /*font-family: 'Josefin Sans';*/
     font-family: 'Josefin Sans';
+    font-weight:300;
+    font-style: normal;
     font-size: 16px;
 }
 /*
@@ -171,26 +174,45 @@ text-align: center;
 }
 
 
-
 @keyframes slide-content {
     from {
     opacity: 0;
+    -ms-transform: translate3d(0, -30px, 0);
+    -webkit-transform: translate3d(0, -30px, 0);
+    -moz-transform: translate3d(0, -30px, 0);
+    -o-transform: translate3d(0, -30px, 0);
     transform: translate3d(0, -30px, 0);
     }
     to {
     opacity:1;
+    -ms-transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
     transform: none;
     }
 }
 
 .slide-content {
+  -ms-animation-name: slide-content;
   -webkit-animation-name: slide-content;
+  -moz-animation-name: slide-content;
+  -o-animation-name: slide-content;
   animation-name: slide-content;
+  -ms-animation-duration: 1.6s;
   -webkit-animation-duration: 1.6s;
+  -moz-animation-duration: 1.6s;
+  -o-animation-duration: 1.6s;
   animation-duration: 1.6s;
+  -ms-animation-fill-mode: both;
   -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
   animation-fill-mode: both;
-   -webkit-animation-delay: 0.0s;
+  -ms-animation-delay: 0.0s;
+  -webkit-animation-delay: 0.0s;
+  -moz-animation-delay: 0.0s;
+  -o-animation-delay: 0.0s;
   animation-delay: 0.0s;
 }
 
@@ -259,7 +281,6 @@ margin-top: 0;
 
 #prices-section {
 padding-top: 37px;
-padding-bottom: 62px;
 background: transparent url("../img/trojkaty6.png") no-repeat center left;
 background-size: 560px 685px;
 position: relative;
@@ -348,6 +369,20 @@ opacity: 0;
 .table-phone {
 display: none;
 }
+
+.message-sent {
+    padding-bottom: 20px;
+    font-weight: bold;
+    color: #69c648;
+    font-size: 18px;
+    }
+
+.message-not-sent {
+    padding-bottom: 20px;
+    font-weight: bold;
+    color: #ff3811;
+    font-size: 18px;
+    }
 
 @media (max-width: 1000px) {
   #contact-section {

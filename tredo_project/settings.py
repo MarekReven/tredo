@@ -102,6 +102,6 @@ TEMPLATE_DIRS = (
 #Sending email
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'host_email'
-EMAIL_HOST_PASSWORD = 'pass'
+EMAIL_HOST_USER = 'sender_email'
+EMAIL_HOST_PASSWORD = 'sender_email_pass'
 EMAIL_PORT = 587
